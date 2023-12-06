@@ -1,5 +1,7 @@
 package collections
 
+import kotlin.streams.toList
+
 fun main(args: Array<String>) {
     val array1 = arrayOf(1, 2, 3, 4)
     array1.forEach { println(it) }

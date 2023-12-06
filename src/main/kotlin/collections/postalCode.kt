@@ -18,11 +18,11 @@ data class GridOperatorProductsDto(
 )
 
 fun main() {
-    var entityEan1Gas = MeteringPointEntity("ean1", "Liander", ProductType.GAS)
-    var entityEan1Elk = MeteringPointEntity("ean1", "Liander", ProductType.ELK)
-    var entityEan2Gas = MeteringPointEntity("ean2", "Liander", ProductType.GAS)
-    var entityEan2Null = MeteringPointEntity("ean2", "Liander", null)
-    var entities = mutableListOf(entityEan1Gas, entityEan1Elk, entityEan2Gas, entityEan2Null)
+    val entityEan1Gas = MeteringPointEntity("ean1", "Liander", ProductType.GAS)
+    val entityEan1Elk = MeteringPointEntity("ean1", "Liander", ProductType.ELK)
+    val entityEan2Gas = MeteringPointEntity("ean2", "Liander", ProductType.GAS)
+    val entityEan2Null = MeteringPointEntity("ean2", "Liander", null)
+    val entities = mutableListOf(entityEan1Gas, entityEan1Elk, entityEan2Gas, entityEan2Null)
 
     println(findByPostalCode_1(entities))
     println(findByPostalCode_2(entities))
