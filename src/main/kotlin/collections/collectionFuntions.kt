@@ -41,8 +41,8 @@ fun getOrElseWithMap(){
 fun getOrElse() {
 
     val list = listOf(0, 10, 20)
-    println(list.getOrElse(1) { 42 })    // 1
-    println(list.getOrElse(10) { 42 })   // 2
+    println(list.getOrElse(1) { 42 })    // 10
+    println(list.getOrElse(10) { 42 })   // 42
 }
 
 fun findInMap() {

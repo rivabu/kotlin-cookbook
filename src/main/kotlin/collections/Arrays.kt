@@ -13,7 +13,10 @@ fun main(args: Array<String>) {
     println(array2[3])
 
     val list = array1.toList()
+    // java style
     val list2 = list.stream().map { it * 2 }.peek { println(it) }.toList()
+
+    // kotlin style
     val list3 = list.map { it * 2 }.onEach { println(it) }.toMutableList()
     println(list2)
     println(list3)

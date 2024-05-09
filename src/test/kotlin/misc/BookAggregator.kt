@@ -1,6 +1,6 @@
 package misc
 
-import collections.collections.Book
+import collections.Book
 import org.junit.jupiter.api.extension.ParameterContext
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor
 import org.junit.jupiter.params.aggregator.ArgumentsAggregator

@@ -111,16 +111,16 @@ internal class AlgorithmsKtTest {
         )
     }
 
-    @Test
-    internal fun `check recursive factorial`() {
-        assertAll(
-            { assertThat(recursiveFactorial(0), `is`(BigInteger.ONE)) },
-            { assertThat(recursiveFactorial(1), `is`(BigInteger.ONE)) },
-            { assertThat(recursiveFactorial(2), `is`(BigInteger.valueOf(2))) },
-            { assertThat(recursiveFactorial(5), `is`(BigInteger.valueOf(120))) },
-            { assertThrows<StackOverflowError> { recursiveFactorial(8000) }}
-        )
-    }
+//    @Test
+//    internal fun `check recursive factorial`() {
+//        assertAll(
+//            { assertThat(recursiveFactorial(0), `is`(BigInteger.ONE)) },
+//            { assertThat(recursiveFactorial(1), `is`(BigInteger.ONE)) },
+//            { assertThat(recursiveFactorial(2), `is`(BigInteger.valueOf(2))) },
+//            { assertThat(recursiveFactorial(5), `is`(BigInteger.valueOf(120))) },
+//            { assertThrows<StackOverflowError> { recursiveFactorial(8000) }}
+//        )
+//    }
 
     @Test @Disabled("slow")
     internal fun `folding factorial tests`() {

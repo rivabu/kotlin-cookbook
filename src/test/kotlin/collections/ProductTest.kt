@@ -1,6 +1,6 @@
 package collections
 
-import collections.collections.Product
+import collections.Product
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.`is`
 import org.hamcrest.Matchers.closeTo
