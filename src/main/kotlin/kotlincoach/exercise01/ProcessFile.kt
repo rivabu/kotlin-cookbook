@@ -7,8 +7,8 @@ import java.nio.file.Paths
 fun main() {
     // Load the file from classpath
     val resourceUrl = Thread.currentThread().contextClassLoader.getResource("users.csv")
-    val path = Paths.get(resourceUrl.toURI())
-    val users = Files.readAllLines(path).drop(1).map {
+    val usersFile = Paths.get(resourceUrl.toURI())
+    val users = Files.readAllLines(usersFile).drop(1).map {
         it.split(",").let { (name, email) -> User(name, email) }
     }
 
@@ -17,7 +17,7 @@ fun main() {
         .flatMap { it.value }
         .sortedBy { it.email }
 
-    File("${path.parent}/duplicates.csv").bufferedWriter().use { out ->
+    File("${usersFile.parent}/duplicates.csv").bufferedWriter().use { out ->
         out.write("Name,Email\n")
         duplicates.forEach { out.write("${it.name},${it.email}\n") }
     }
