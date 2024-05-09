@@ -1,16 +1,14 @@
 package collections.kotlincoach.exercise02
 
-import java.net.URI
-import java.net.http.HttpClient
-import java.net.http.HttpRequest
-import java.net.http.HttpResponse
-import java.nio.file.Files
-import java.nio.file.Paths
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import java.io.File
+import java.net.URI
+import java.net.http.HttpClient
+import java.net.http.HttpRequest
+import java.net.http.HttpResponse
 
 fun main() = runBlocking {
     val job = launch(Dispatchers.IO) {
@@ -30,7 +28,6 @@ suspend fun fetchUserData(url: String): List<User> = withContext(Dispatchers.IO)
     val response = client.send(request, HttpResponse.BodyHandlers.ofString())
     parseJson(response.body())
 }
-
 
 fun parseJson(jsonData: String): List<User> {
     val json = org.json.JSONArray(jsonData)
